@@ -28,5 +28,5 @@ app.post("/posts",(req,res)=>{
 const PORT = 4000;
 
 app.listen(PORT,()=>{
-  console.log(`Server up and running in port ${PORT}`)
+  console.log(`Posts service up and running in port ${PORT}`)
 });
