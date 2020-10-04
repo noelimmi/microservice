@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const CommentCreate = ({ postId }) => {
+const CommentCreate = ({ postId, rerender, rerenderCallback }) => {
   const [content, setContent] = useState("");
 
   const onSubmit = async (event) => {
@@ -10,6 +10,8 @@ const CommentCreate = ({ postId }) => {
     await axios.post(`http://localhost:4001/posts/${postId}/comments`, {
       content,
     });
+
+    rerenderCallback(!rerender);
 
     setContent("");
   };
