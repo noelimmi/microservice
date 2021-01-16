@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: posts-depl
+spec:
+  replicas: 1
+  #selector and metadata inside template is used by deployment to identify a pod
+  #matchLabels -> gives data to be matched from the template metadata (here app is given) 
+  selector:
+    matchLabels:
+      app: posts
+  template:
+    metadata:
+      labels:
+        app: posts
+    spec:
+      containers:
+        - name: posts
+          image: immi98/posts:latest
