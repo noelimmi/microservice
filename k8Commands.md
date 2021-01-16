@@ -17,3 +17,4 @@
 1. kubectl describe deployment [depl_name] -> prints out details about a specific deployment.
 1. kubectl apply -f [confif_file_name] -> create a deployment out of a config file.
 1. kubectl delete deployment [depl_name] -> delete a deployment.
+1. kubectl rollout restart deployment [depl_name] -> restarts deployment

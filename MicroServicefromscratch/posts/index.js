@@ -43,5 +43,6 @@ app.post("/events", (req, res) => {
 const PORT = 4000;
 
 app.listen(PORT, () => {
+  console.log("Added for a update v2");
   console.log(`Posts service up and running in port ${PORT}`);
 });

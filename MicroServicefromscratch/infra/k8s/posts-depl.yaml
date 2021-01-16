@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
         - name: posts
-          image: immi98/posts:latest
+          image: noelimmi/posts:latest
