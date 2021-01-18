@@ -10,6 +10,8 @@ app.use(cors());
 const posts = {};
 
 const handleEvent = (type, data) => {
+  console.log(type);
+  console.log(data);
   if (type === "PostCreated") {
     const { id, title } = data;
     posts[id] = { id, title, comments: [] };
@@ -35,6 +37,7 @@ const handleEvent = (type, data) => {
 };
 
 app.get("/posts", (req, res) => {
+  console.log("I am called");
   res.send(posts);
 });
 
