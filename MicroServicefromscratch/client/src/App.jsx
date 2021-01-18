@@ -7,7 +7,7 @@ const App = () => {
 
   return (
     <div className="container">
-      <h1>Create Post</h1>
+      <h1>Create Post!!!!</h1>
       <PostCreate rerender={rerender} rerenderCallback={setRerender} />
       <hr />
       <h1>Posts</h1>

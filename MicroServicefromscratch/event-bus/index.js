@@ -27,5 +27,6 @@ app.get("/events", (req, res) => {
 const PORT = 4005;
 
 app.listen(PORT, () => {
+  console.log("Test");
   console.log(`Event-Bus up and running in ${PORT}`);
 });
