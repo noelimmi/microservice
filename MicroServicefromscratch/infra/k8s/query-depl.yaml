@@ -1,35 +1,35 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: posts-depl
+  name: query-depl
 spec:
   replicas: 1
   #selector and metadata inside template is used by deployment to identify a pod
   #matchLabels -> gives data to be matched from the template metadata (here app is given) 
   selector:
     matchLabels:
-      app: posts
+      app: query
   template:
     metadata:
       labels:
-        app: posts
+        app: query
     spec:
       containers:
-        - name: posts
-          image: noelimmi/posts:latest
+        - name: query
+          image: noelimmi/query:latest
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: posts-clusterip-srv
+  name: query-srv
 spec:
   selector:
-    app: posts
+    app: query
   #By default if type is not specified in spec, then it will create
   #ClusterIP
   type: ClusterIP
   ports: 
-    - name: posts
+    - name: query
       protocol: TCP
-      port: 4000
-      targetPort: 4000
+      port: 4002
+      targetPort: 4002
